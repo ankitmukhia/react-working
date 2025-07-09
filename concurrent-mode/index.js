@@ -13,7 +13,8 @@
  *
  * Why do we check in between because browser run on a single thread.
  *
- * Idle means when all high priority job is done i.e clicks, typing, scrolling, animations etc. 
+ * Idle means when all high priority job is done i.e clicks, typing, scrolling, animations etc.
+ * requestIdleCallback: gives deadline parameter. checks how many milliseconds I(the browser) can give you before it gets busy again with units. 
  */
 
 function createElement(type, props, ...children) {
@@ -67,10 +68,10 @@ const Didact = {
 
 /** @jsx Didact.createElement */
 const element = (
-  <div style="background: salmon">
-    <h1>Hello World</h1>
-    <h2 style="text-align:right">from Didact</h2>
-  </div>
+	<div style="background: salmon">
+		<h1>Hello World</h1>
+		<h2 style="text-align:right">from Didact</h2>
+	</div>
 );
 
 const container = document.getElementById("root")
